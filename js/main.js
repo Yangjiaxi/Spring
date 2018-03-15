@@ -23,7 +23,6 @@ $(function ()
 
   function initAll ()
   {
-    console.log("Welcome!");
     resize();
     document.addEventListener("mousewheel", scroll);
     $(window).on("resize", resize);
@@ -175,4 +174,24 @@ $(function ()
     });
   }
 });
+
+jQuery.easing["jswing"] = jQuery.easing["swing"];
+
+jQuery.extend(jQuery.easing,
+  {
+    def: "easeOutQuad",
+    swing: function (x, t, b, c, d)
+    {
+      //alert(jQuery.easing.default);
+      return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+    },
+    easeOutQuad: function (x, t, b, c, d)
+    {
+      return -c * (t /= d) * (t - 2) + b;
+    },
+    easeOutQuart: function (x, t, b, c, d)
+    {
+      return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+    }
+  });
 
