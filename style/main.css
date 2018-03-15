@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+@font-face
+{
+  font-family :'Snickles';
+  src         :url('fonts/Snickles.eot');
+  src         :url('fonts/Snickles.eot') format('embedded-opentype'),
+  url('fonts/Snickles.woff2') format('woff2'),
+  url('fonts/Snickles.woff') format('woff'),
+  url('fonts/Snickles.ttf') format('truetype'),
+  url('fonts/Snickles.svg#Snickles') format('svg');
+}
+
+@font-face
+{
+  font-family :'SourceSansProExtraLight';
+  src         :url('fonts/SourceSansProExtraLight.eot');
+  src         :url('fonts/SourceSansProExtraLight.eot') format('embedded-opentype'),
+  url('fonts/SourceSansProExtraLight.woff2') format('woff2'),
+  url('fonts/SourceSansProExtraLight.woff') format('woff'),
+  url('fonts/SourceSansProExtraLight.ttf') format('truetype'),
+  url('fonts/SourceSansProExtraLight.svg#SourceSansProExtraLight') format('svg');
+}
+
+@font-face
+{
+  font-family :"ShangHei";
+  src         :url("fonts/ShangHei.eot");
+  src         :url("fonts/ShangHei.eot?#iefix") format("embedded-opentype"),
+  url("fonts/ShangHei.woff") format("woff"),
+  url("fonts/ShangHei.ttf") format("truetype"),
+  url("fonts/ShangHei.svg#ShangHei") format("svg");
+  font-style  :normal;
+  font-weight :normal;
+}
+
+@font-face
+{
+  font-family :"SourceSansPro-Semibold";
+  src         :url("fonts/SourceSansPro-Semibold.eot");
+  src         :url("fonts/SourceSansPro-Semibold.eot?#iefix") format("embedded-opentype"),
+  url("fonts/SourceSansPro-Semibold.woff") format("woff"),
+  url("fonts/SourceSansPro-Semibold.ttf") format("truetype"),
+  url("fonts/SourceSansPro-Semibold.svg#SourceSansPro-Semibold") format("svg");
+  font-style  :normal;
+  font-weight :normal;
+}
+
+*
+{
+  margin                      :0;
+  padding                     :0;
+  box-sizing                  :border-box;
+  overflow                    :hidden;
+  -webkit-user-select         :none;
+  -moz-user-select            :none;
+  -ms-user-select             :none;
+  user-select                 :none;
+  -webkit-tap-highlight-color :transparent;
+}
+
+body, html
+{
+  position :relative;
+  width    :100%;
+  height   :100%;
+}
+
+.bigBox
+{
+  position :absolute;
+  width    :100%;
+  height   :1000%
+}
+
+.pages
+{
+  width    :100%;
+  position :relative;
+}
+
+.next
+{
+  cursor            :pointer;
+  position          :absolute;
+  bottom            :2vh;
+  width             :14vm;
+  width             :14vmin;
+  left              :calc(50% - 7vm);
+  left              :calc(50% - 7vmin);
+  z-index           :9999;
+  -webkit-animation :arrow 2s ease-in-out infinite;
+  animation         :arrow 2s ease-in-out infinite;
+}
+
+body
+{
+  margin   :0;
+  padding  :0;
+  overflow :hidden;
+}
+
+#page1, #page10
+{
+  background      :url(../image/bg.jpg) no-repeat;
+  background-size :cover;
+}
+
+#toTop
+{
+  cursor            :pointer;
+  width             :8vmin;
+  height            :8vmin;
+  z-index           :9999;
+  position          :absolute;
+  bottom            :5vmin;
+  right             :5vmin;
+  -webkit-animation :arrow 2.5s ease-in-out infinite;
+  animation         :arrow 2.5s ease-in-out infinite;
+}
+
+#page2
+{background-color :#998fc0;}
+
+#page3
+{background-color :#91d16e;}
+
+#page4
+{background-color :#df9694;}
+
+#page5
+{background-color :#edcf62;}
+
+#page6
+{background-color :#ebba83;}
+
+#page7
+{background-color :#83d4e2;}
+
+#page8
+{background-color :#e09b6e;}
+
+#page9
+{background-color :#47baa9;}
+
+.logo
+{
+  max-height        :50vh;
+  position          :absolute;
+  bottom            :100%;
+  left              :50%;
+  -webkit-transform :translateX(-50%);
+  transform         :translateX(-50%);
+}
+
+.f_logo
+{
+  position   :absolute;
+  color      :white;
+  text-align :center;
+  top        :55vh;
+  right      :110%;
+  width      :-moz-fit-content;
+  /*width      :-webkit-fit-content;*/
+  width      :fit-content;
+}
+
+.f_name
+{
+  font-family :Snickles, serif;
+  font-size   :12vh;
+  padding     :0 2vh 0 2vh;
+}
+
+.f_us
+{
+  font-family :SourceSansProExtraLight, serif;
+  font-size   :3vh;
+  margin-top  :-3vh;
+}
+
+.info
+{
+  font-family :ShangHei, serif;
+  color       :white;
+  font-size   :4vh;
+  width       :80vw;
+  left        :10vw;
+  position    :absolute;
+  top         :22vh;
+  overflow    :visible;
+  display     :none;
+}
+
+.text
+{
+  margin-bottom :2vh;
+}
+
+.goIn
+{
+  display                     :block !important;
+  -webkit-animation-name      :bounceIn;
+  animation-name              :bounceIn;
+  -webkit-animation-duration  :500ms;
+  animation-duration          :500ms;
+  -webkit-animation-fill-mode :both;
+  animation-fill-mode         :both
+}
+
+.wantLink
+{
+  text-decoration :underline;
+  text-align      :right;
+  cursor          :pointer;
+}
+
+.want
+{
+  position    :absolute;
+  font-family :ShangHei, serif;
+  color       :white;
+  font-size   :4vh;
+  width       :80vw;
+  left        :10vw;
+  top         :20vh;
+  overflow    :visible;
+  display     :none;
+}
+
+#page5 .want
+{
+  font-size   :3vh;
+  line-height :3.1vh;
+  margin-top  :-1vh;
+}
+
+#join
+{
+  z-index         :999999999;
+  cursor          :pointer;
+  color           :white;
+  position        :fixed;
+  font-family     :SourceSansProExtraLight, serif;
+  font-size       :4vh;
+  margin          :2vh;
+  padding         :1vh;
+  right           :5vw;
+  bottom          :5vh;
+  text-decoration :underline;
+}
+
+#indexLogo
+{
+  position       :relative;
+  margin         :25vh auto 0 auto;
+  font-weight    :bold;
+  letter-spacing :1vw;
+  /*width          :-webkit-fit-content;*/
+  width          :-moz-fit-content;
+  width          :fit-content;
+}
+
+#logo1, #logo2
+{
+  font-family :SourceSansPro-Semibold, serif;
+  font-size   :7vh;
+  color       :#3e3f40;
+}
+
+#logo2
+{
+  text-align  :right;
+  margin-left :20vm;
+  margin-left :20vmin;
+}
+
+.indexText
+{
+  /*width       :-webkit-fit-content;*/
+  width       :-moz-fit-content;
+  width       :fit-content;
+  border-top  :#3e3f40 solid 1vh;
+  margin      :12vh 8vh 0 auto;
+  padding-top :1vh;
+}
+
+.indexTextIn
+{
+  font-family :ShangHei, serif;
+  font-size   :6vh;
+}
+
+#lastText
+{
+  /*width       :-webkit-fit-content;*/
+  width       :-moz-fit-content;
+  width       :fit-content;
+  margin      :20vh auto 0 auto;
+  font-family :ShangHei, serif;
+  text-align  :center;
+  font-size   :3.5vh;
+  color       :#242424;
+  line-height :6vh;
+  font-weight :600;
+}
+
+#way
+{
+  font-size :5vh;
+}
+

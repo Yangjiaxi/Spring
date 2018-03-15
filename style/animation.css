@@ -1,0 +1,53 @@
+@-webkit-keyframes bounceIn
+{
+  from
+  {
+    opacity           :0;
+    -ms-filter        :"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transform :scale(.1);
+    transform         :scale(.1);
+  }
+  to
+  { opacity           :1; -ms-filter :"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transform :scale(1);
+    transform         :scale(1);
+  }
+}
+
+@keyframes bounceIn
+{
+  from
+  {
+    opacity           :0;
+    -ms-filter        :"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transform :scale(.1);
+    transform         :scale(.1);
+  }
+  to
+  { opacity           :1; -ms-filter :"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transform :scale(1);
+    transform         :scale(1);
+  }
+}
+
+@-webkit-keyframes arrow
+{
+  0%
+  {-webkit-transform :translateY(-5px) rotateY(0deg);transform :translateY(-5px) rotateY(0deg);}
+  50%
+  {-webkit-transform :translateY(5px) rotateY(180deg);transform :translateY(5px) rotateY(180deg);}
+  100%
+  {-webkit-transform :translateY(-5px) rotateY(360deg);transform :translateY(-5px) rotateY(360deg);}
+}
+
+@keyframes arrow
+{
+  0%
+  {-webkit-transform :translateY(-5px) rotateY(0deg);transform :translateY(-5px) rotateY(0deg);}
+  50%
+  {-webkit-transform :translateY(5px) rotateY(180deg);transform :translateY(5px) rotateY(180deg);}
+  100%
+  {-webkit-transform :translateY(-5px) rotateY(360deg);transform :translateY(-5px) rotateY(360deg);}
+}
+
+
